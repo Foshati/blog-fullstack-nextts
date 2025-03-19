@@ -14,9 +14,9 @@ export default function Logo({ className }: LogoProps) {
         alt='blog-logo'
         fill
         /* sizes="10vw" */
-        sizes='(max-width: 768px) 39px, 50px'
+        sizes='(max-width: 768px) 39px, 50px '
         priority
-        className='object-contain'
+        className='object-contain rounded-full'
       />
     </div>
   );

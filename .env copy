@@ -1,5 +1,5 @@
 
 
-DATABASE_URL="---"
+DATABASE_URL=""
 NEXTAUTH_KEY="password"
 NEXTAUTH_URL=http://localhost:3000
