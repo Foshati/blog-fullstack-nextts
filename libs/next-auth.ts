@@ -46,13 +46,16 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     jwt: ({ token, user }) => {
-      // فرض می‌کنیم که user همیشه وجود دارد
-      const { id, role } = user as User;
-      return {
-        ...token,
-        userId: id,
-        userRole: role,
-      };
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      if (user) {
+        const typedUser = user as User;
+        return {
+          ...token,
+          userId: typedUser.id,
+          userRole: typedUser.role,
+        };
+      }
+      return token;
     },
     session: ({ session, token }) => {
       return {

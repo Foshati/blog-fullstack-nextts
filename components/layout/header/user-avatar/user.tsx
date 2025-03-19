@@ -9,8 +9,8 @@ type UserProp = {
 const User = ({ name }: UserProp) => {
   return (
     <div className='flex items-center justify-between gap-x-2'>
-      <div className='flex size-10 items-center justify-center rounded-full border'>
-        <span className='text-2xl font-bold'>{name[0]}</span>
+      <div className='flex size-8 items-center justify-center rounded-full border'>
+        <span className='text-2xl font-bold '>{name[0].toUpperCase()}</span>
       </div>
       <button
         className='btn btn-ghost btn-circle'

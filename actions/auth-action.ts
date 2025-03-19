@@ -62,6 +62,7 @@ export async function createUser(prevState: SignUpFormState, formData: FormData)
         name: name as string,
         email: email as string,
         hashedPassword,
+        role: 'USER', // اضافه کردن role پیش‌فرض به کاربر جدید
       },
     });
 
